@@ -91,7 +91,7 @@
     <div class="tbl">
       <div class="th" data-zh="產品" data-en="Product">產品</div>
       <div class="th" data-zh="最長工期（條件B・關鍵路徑）" data-en="Longest lead time (Cond. B · Critical Path)">最長工期（條件B・關鍵路徑）</div>
-      <div class="th" data-zh="最短工期（條件A・直接 PPAP）" data-en="Shortest lead time (Cond. A · Direct PPAP)">最短工期（條件A・直接 PPAP）</div>
+      <div class="th" data-zh="最短工期（條件A・初樣一次通過）" data-en="Shortest lead time (Cond. A · first-trial pass)">最短工期（條件A・初樣一次通過）</div>
       <div class="th" data-zh="CPM 縮圖" data-en="CPM Diagram">CPM 縮圖</div>
       <div class="c prod">Crown</div>
       <div class="c"><span class="big">88</span></div>
@@ -126,8 +126,8 @@
   var modal=document.getElementById('modal'),body=document.getElementById('modal-body'),title=document.getElementById('modal-title');
   var curCard=null, lang='zh';
   var FOOT={
-    zh:'最長工期 ＝ <b>條件B</b>（量產驗證後 PPAP・關鍵路徑）　·　最短工期 ＝ <b>條件A</b>（直接 PPAP）　·　單位：工作天　·　點擊任一列可放大 CPM',
-    en:'Longest = <b>Cond. B</b> (PPAP after optimization · critical path)　·　Shortest = <b>Cond. A</b> (no optimization · direct PPAP)　·　Unit: working days　·　click any row to enlarge the CPM'
+    zh:'最長工期 ＝ <b>條件B</b>（需量產樣品優化後 PPAP・關鍵路徑）　·　最短工期 ＝ <b>條件A</b>（初樣一次通過，直接 PPAP）　·　單位：工作天　·　點擊任一列可放大 CPM',
+    en:'Longest = <b>Cond. B</b> (PPAP after production-sample optimization · critical path)　·　Shortest = <b>Cond. A</b> (first-trial pass → direct PPAP)　·　Unit: working days　·　click any row to enlarge the CPM'
   };
   function applyLang(){
     document.querySelectorAll('[data-zh]').forEach(function(e){ e.textContent=e.dataset[lang]; });
